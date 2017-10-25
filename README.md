@@ -30,7 +30,43 @@ The module features
 }
 ```
 
-## Usage
+## Options
+
+### defer
+```js
+{
+  modules: [
+    // With options
+    ['nuxt-stripe-module', {
+      defer: true,
+    }],
+ ]
+}
+```
+
+### async
+```js
+{
+  modules: [
+    // With options
+    ['nuxt-stripe-module', {
+      async: true,
+    }],
+ ]
+}
+```
+
+### version
+```js
+{
+  modules: [
+    // With options
+    ['nuxt-stripe-module', {
+      version: 'v2',
+    }],
+ ]
+}
+```
 
 Module Description
 
