@@ -1,6 +1,6 @@
 {
   "name": "nuxt-stripe-module",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "NuxtJS module for Stripe.js",
   "license": "MIT",
   "contributors": [
