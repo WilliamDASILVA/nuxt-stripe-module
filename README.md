@@ -1,23 +1,34 @@
-# nuxt-stripe-module
+# Nuxt Stripe Module
+
 [![npm (scoped with tag)](https://img.shields.io/npm/v/nuxt-stripe-module/latest.svg?style=flat-square)](https://npmjs.com/package/nuxt-stripe-module)
 [![npm](https://img.shields.io/npm/dt/nuxt-stripe-module.svg?style=flat-square)](https://npmjs.com/package/nuxt-stripe-module)
-[![CircleCI](https://img.shields.io/circleci/project/github/.svg?style=flat-square)](https://circleci.com/gh/)
-[![Codecov](https://img.shields.io/codecov/c/github/.svg?style=flat-square)](https://codecov.io/gh/)
-[![Dependencies](https://david-dm.org//status.svg?style=flat-square)](https://david-dm.org/)
 [![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
 
-> NuxtJS module for Stripe.js
+> A NuxtJS module to import Stripe client script.
 
-[📖 **Release Notes**](./CHANGELOG.md)
+## Table of Contents ##
 
-## Features
+* [Requirements](#requirements)
+* [Install](#install)
+* [Getting Started](#getting-started)
+* [Usage](#usage)
+* [License](#license)
 
-The module features
+## Requirements
 
-## Setup
-- Add `nuxt-stripe-module` dependency using yarn or npm to your project
-- Add `nuxt-stripe-module` to `modules` section of `nuxt.config.js`
+* npm
+* NuxtJS
+* NodeJS
 
+## Install
+
+```bash
+$ npm install --save nuxt-stripe-module
+```
+
+## Getting Started
+
+Add `nuxt-stripe-module` to `modules` section of `nuxt.config.js`.
 ```js
 {
   modules: [
@@ -25,53 +36,57 @@ The module features
     'nuxt-stripe-module',
 
     // With options
-    ['nuxt-stripe-module', { /* module options */ }],
- ]
-}
-```
-
-## Options
-
-### defer
-```js
-{
-  modules: [
-    // With options
     ['nuxt-stripe-module', {
-      defer: true,
+      /* module options */
+      version: 'v3', // Default
     }],
  ]
 }
 ```
-
-### async
+or even
 ```js
 {
   modules: [
-    // With options
-    ['nuxt-stripe-module', {
-      async: true,
-    }],
- ]
+    'nuxt-stripe-module',
+  ],
+  stripe: {
+    version: 'v3',
+  },
 }
 ```
 
-### version
+## Usage
+
+You can use this module to inject in your components a `$stripe` instance, by setting the publishableKey instead of calling `window.Stripe(PUBLISHABLE_KEY)` every time.
+
 ```js
 {
   modules: [
-    // With options
-    ['nuxt-stripe-module', {
-      version: 'v2',
-    }],
- ]
+    'nuxt-stripe-module',
+  ],
+  stripe: {
+    version: 'v3',
+    publishableKey: 'YOUR_STRIPE_PUBLISHABLE_KEY',
+  },
 }
 ```
 
-Module Description
+Then you can use it in your components like:
+
+```js
+{
+  ...
+  mounted() {
+    const elements = this.$stripe.elements();
+    const card = elements.create('card');
+    // Add an instance of the card Element into the `card-element` <div>
+    card.mount('#card-element');
+  },
+  ...
+}
+```
+( See Stripe documentation: https://stripe.com/docs/stripe-js/reference)
 
 ## License
 
 [MIT License](./LICENSE)
-
-Copyright (c) WilliamDASILVA <william.da.silva@outlook.com>
