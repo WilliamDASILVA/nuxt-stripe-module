@@ -57,7 +57,7 @@ or even
 
 ## Usage
 
-You can use this module to inject in your components a `$stripe` instance, by setting the publishableKey instead of calling `window.Stripe(PUBLISHABLE_KEY)` every time.
+You can use this module to inject in your components a `$stripe` object, by setting the publishableKey instead of calling `window.Stripe(PUBLISHABLE_KEY)` every time.
 
 ```js
 {
@@ -77,7 +77,7 @@ Then you can use it in your components like:
 {
   ...
   mounted() {
-    const elements = this.$stripe.elements();
+    const elements = this.$stripe.import().elements();
     const card = elements.create('card');
     // Add an instance of the card Element into the `card-element` <div>
     card.mount('#card-element');

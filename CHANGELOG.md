@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+## [2.0.0](https://github.com/WilliamDASILVA/nuxt-stripe-module/compare/v1.0.5...v2.0.0) (2017-11-28)
+- BREAKING CHANGE: Stripe should be used using this.$stripe.load() instead of just this.$stripe().
+
 <a name="1.1.0"></a>
 ## [1.1.0](https://github.com/WilliamDASILVA/nuxt-stripe-module/compare/v1.0.5...v1.1.0) (2017-11-06)
 - Add Stripe publishable key in options
