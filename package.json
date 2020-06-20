@@ -15,8 +15,7 @@
   },
   "scripts": {
     "lint": "eslint lib test",
-    "test": "npm run lint && jest",
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "test": "npm run lint && jest"
   },
   "eslintIgnore": [
     "lib/templates/*.*"
