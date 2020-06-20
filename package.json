@@ -15,8 +15,7 @@
   },
   "scripts": {
     "lint": "eslint lib test",
-    "test": "npm run lint && jest",
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "test": "npm run lint && jest"
   },
   "eslintIgnore": [
     "lib/templates/*.*"
@@ -24,17 +23,16 @@
   "files": [
     "lib"
   ],
-  "jest": {
-    "testEnvironment": "node",
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "lib",
-      "test"
-    ]
-  },
   "dependencies": {},
   "devDependencies": {
-    "nuxt-module-builder": "latest"
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@nuxtjs/eslint-config": "latest",
+    "@nuxtjs/module-test-utils": "latest",
+    "babel-eslint": "latest",
+    "babel-jest": "latest",
+    "eslint": "latest",
+    "jest": "latest",
+    "nuxt": "latest"
   }
 }
