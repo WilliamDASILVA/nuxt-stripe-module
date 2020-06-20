@@ -24,15 +24,6 @@
   "files": [
     "lib"
   ],
-  "jest": {
-    "testEnvironment": "node",
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "lib",
-      "test"
-    ]
-  },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "latest",
@@ -43,6 +34,6 @@
     "babel-jest": "latest",
     "eslint": "latest",
     "jest": "latest",
-    "nuxt-edge": "latest"
+    "nuxt": "latest"
   }
 }
