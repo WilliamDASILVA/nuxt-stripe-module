@@ -1,14 +1,13 @@
 module.exports = {
   root: true,
   parserOptions: {
+    parser: 'babel-eslint',
     sourceType: 'module'
   },
   env: {
-    browser: true,
-    node: true,
     jest: true
   },
-  extends: 'standard',
+  extends: '@nuxtjs',
   plugins: [
     'jest',
     'vue'
@@ -24,7 +23,6 @@ module.exports = {
     'no-console': 2
   },
   globals: {
-    'jest/globals': true,
-    jasmine: true
+    'jest/globals': true
   }
 }
