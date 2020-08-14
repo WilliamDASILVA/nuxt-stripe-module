@@ -74,7 +74,7 @@ The following options can be configured in the module's configuration entry in y
 
 Your publishable key.
 
-https://stripe.com/docs/js/initializing#init_stripe_js-options-locale
+https://stripe.com/docs/js/initializing#init_stripe_js-publishableKey
 
 #### Version - `version`
 
