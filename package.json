@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-stripe-module",
+  "name": "@guibovo/nuxt-stripe-module",
   "version": "2.1.0",
   "description": "NuxtJS module for Stripe.js",
   "license": "MIT",
@@ -15,7 +15,9 @@
   },
   "scripts": {
     "lint": "eslint lib test",
-    "test": "npm run lint && jest"
+    "test": "npm run lint && jest",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
   },
   "eslintIgnore": [
     "lib/templates/*.*"
