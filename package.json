@@ -15,7 +15,7 @@
   },
   "scripts": {
     "lint": "eslint lib test",
-    "test": "npm run lint && jest",
+    "test": "npm run lint && jest --detectOpenHandles",
     "build": "nuxt build",
     "generate": "nuxt generate"
   },
