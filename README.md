@@ -76,10 +76,10 @@ Your publishable key.
 
 https://stripe.com/docs/js/initializing#init_stripe_js-publishableKey
 
-#### Version - `version`
+#### API version - `apiVersion`
 
 - **Optional**
-- **Default:** `'v3'`
+- **Default:** `null`
 
 Override your account's API version.
 
@@ -95,13 +95,6 @@ error strings for all Stripe.js methods. It will also configure the locale for E
 
 https://stripe.com/docs/js/initializing#init_stripe_js-options-locale
 
-#### Script - `script`
-
-- **Optional**
-- **Default**: `true`
-
-The plugin will automatically push the stripe script into the `<head>` of your document. You can disable this by setting this option to `false`.
-
 ## Usage
 
 1. Inject the module in your `nuxt.config.js` file. See [Getting Started](#getting-started).
@@ -111,7 +104,7 @@ The plugin will automatically push the stripe script into the `<head>` of your d
 {
   ...
   mounted() {
-    const elements = this.$stripe.import().elements();
+    const elements = this.$stripe.elements();
     const card = elements.create('card', {});
     // Add an instance of the card Element into the `card-element` <div>
     card.mount('#card-element');
