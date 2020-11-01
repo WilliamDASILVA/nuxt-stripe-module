@@ -74,12 +74,12 @@ The following options can be configured in the module's configuration entry in y
 
 Your publishable key.
 
-https://stripe.com/docs/js/initializing#init_stripe_js-options-locale
+https://stripe.com/docs/js/initializing#init_stripe_js-publishableKey
 
-#### Version - `version`
+#### API version - `apiVersion`
 
 - **Optional**
-- **Default:** `'v3'`
+- **Default:** `null`
 
 Override your account's API version.
 
@@ -95,8 +95,6 @@ error strings for all Stripe.js methods. It will also configure the locale for E
 
 https://stripe.com/docs/js/initializing#init_stripe_js-options-locale
 
-
-
 ## Usage
 
 1. Inject the module in your `nuxt.config.js` file. See [Getting Started](#getting-started).
@@ -106,7 +104,7 @@ https://stripe.com/docs/js/initializing#init_stripe_js-options-locale
 {
   ...
   mounted() {
-    const elements = this.$stripe.import().elements();
+    const elements = this.$stripe.elements();
     const card = elements.create('card', {});
     // Add an instance of the card Element into the `card-element` <div>
     card.mount('#card-element');
