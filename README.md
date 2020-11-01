@@ -95,7 +95,12 @@ error strings for all Stripe.js methods. It will also configure the locale for E
 
 https://stripe.com/docs/js/initializing#init_stripe_js-options-locale
 
+#### Script - `script`
 
+- **Optional**
+- **Default**: `true`
+
+The plugin will automatically push the stripe script into the `<head>` of your document. You can disable this by setting this option to `false`.
 
 ## Usage
 
