@@ -1,11 +1,8 @@
 <template>
-<div>
+  <div>
     Works!
-</div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
 </script>

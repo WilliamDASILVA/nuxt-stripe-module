@@ -14,6 +14,7 @@
     "access": "public"
   },
   "scripts": {
+    "dev": "nuxt test/fixture",
     "lint": "eslint lib test",
     "test": "npm run lint && jest"
   },
@@ -23,7 +24,9 @@
   "files": [
     "lib"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@stripe/stripe-js": "^1.11.0"
+  },
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
