@@ -1,9 +1,13 @@
-/* eslint-disable camelcase */
-import Vue from 'vue';
-import Stripe from '@stripe/stripe-js/types/stripe-js/index'
+import { Stripe } from '@stripe/stripe-js'
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $stripe: Stripe;
+    $stripe: Stripe
+  }
+}
+
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    $stripe: Stripe
   }
 }
