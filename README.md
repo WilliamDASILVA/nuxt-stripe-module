@@ -93,7 +93,10 @@ https://stripe.com/docs/js/initializing#init_stripe_js-options-apiVersion
 A locale used to globally configure localization in Stripe. Setting the locale here will localize
 error strings for all Stripe.js methods. It will also configure the locale for Elements and Checkout. Default is auto (Stripe detects the locale of the browser).
 
-https://stripe.com/docs/js/initializing#init_stripe_js-options-locale
+#### Stripe Account - `stripeAccount`
+
+- **Optional**
+- **Default**: `null`
 
 ## Usage
 
