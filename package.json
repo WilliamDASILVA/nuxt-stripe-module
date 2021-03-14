@@ -1,6 +1,6 @@
 {
   "name": "nuxt-stripe-module",
-  "version": "3.1.1",
+  "version": "3.1.4",
   "description": "NuxtJS module for Stripe.js",
   "license": "MIT",
   "contributors": [
@@ -22,9 +22,10 @@
     "lib/templates/*.*"
   ],
   "files": [
-    "lib"
+    "lib",
+    "types/*.d.ts"
   ],
-  "types": "./index.d.ts",
+  "types": "./types/index.d.ts",
   "dependencies": {
     "@stripe/stripe-js": "^1.11.0"
   },

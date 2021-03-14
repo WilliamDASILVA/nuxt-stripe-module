@@ -13,6 +13,7 @@
 * [Getting Started](#getting-started)
 * [Options](#options)
 * [Usage](#usage)
+* [Typescript](#typescript)
 * [License](#license)
 
 ## Requirements
@@ -118,6 +119,25 @@ error strings for all Stripe.js methods. It will also configure the locale for E
 }
 ```
 [For more details, please refer to the official Stripe documentation.](https://stripe.com/docs/stripe-js/reference)
+
+## TypeScript
+
+Add the types to your "types" array in `tsconfig.json` after the `@nuxt/types` (Nuxt 2.9.0+) or `@nuxt/vue-app` entry
+
+```json{}[tsconfig.json]
+{
+  "compilerOptions": {
+    "types": [
+      "@nuxt/types",
+      "nuxt-stripe-module"
+    ]
+  }
+}
+```
+> **Why?**
+>
+> Because of the way Nuxt works the `$stripe` property on the context has to be merged into the Nuxt `Context` interface via [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). Adding `nuxt-stripe-module` to your types will import the types from the package and make typescript aware of the additions to the `Context` interface.
+
 
 ## License
 
