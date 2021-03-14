@@ -98,23 +98,23 @@ https://stripe.com/docs/js/initializing#init_stripe_js-options-locale
 ## Usage
 
 1. Inject the module in your `nuxt.config.js` file. See [Getting Started](#getting-started).
-2. `this.$stripe` is now available in your components:
+2. `this.$stripe` is now available in your components. **Note** that `$stripe` can be `null` if the script fails to load.
 
 ```js
 {
   ...
   mounted() {
-    const elements = this.$stripe.elements();
-    const card = elements.create('card', {});
-    // Add an instance of the card Element into the `card-element` <div>
-    card.mount('#card-element');
+    if (this.$stripe) {
+      const elements = this.$stripe.elements();
+      const card = elements.create('card', {});
+      // Add an instance of the card Element into the `card-element` <div>
+      card.mount('#card-element');
+    }
   },
   ...
 }
 ```
 [For more details, please refer to the official Stripe documentation.](https://stripe.com/docs/stripe-js/reference)
-
-
 
 ## License
 
