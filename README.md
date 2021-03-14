@@ -97,7 +97,7 @@ error strings for all Stripe.js methods. It will also configure the locale for E
 #### Stripe Account - `stripeAccount`
 
 - **Optional**
-- **Default**: `null`
+- **Default**: `''`
 
 ## Usage
 
