@@ -6,10 +6,9 @@ All notable changes to this project will be documented in this file. See [standa
 ## [2.0.0](https://github.com/WilliamDASILVA/nuxt-stripe-module/compare/v1.0.5...v2.0.0) (2017-11-28)
 - BREAKING CHANGE: Stripe should be used using this.$stripe.load() instead of just this.$stripe().
 
-<a name="1.1.0"></a>
+<a name="1.2.0"></a>
 ## [1.1.0](https://github.com/WilliamDASILVA/nuxt-stripe-module/compare/v1.0.5...v1.1.0) (2017-11-06)
-- Add Stripe publishable key in options
-- Inject $stripe
+- Add locale in options options
 
 <a name="1.0.5"></a>
 ## [1.0.5](https://github.com/WilliamDASILVA/nuxt-stripe-module/compare/v1.0.4...v1.0.5) (2017-10-25)
