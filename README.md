@@ -36,9 +36,9 @@ $ yarn add nuxt-stripe-module
 
 ## Getting Started
 
-Add `'nuxt-stripe-module'` to the `modules` section of your `nuxt.config.js` file.
+Add `'nuxt-stripe-module'` to the `modules` section of your `nuxt.config.js` file. 
 
-#### Inline configuration entry
+#### Method 1 : Inline configuration entry
 
 ```javascript
 {
@@ -50,7 +50,7 @@ Add `'nuxt-stripe-module'` to the `modules` section of your `nuxt.config.js` fil
 }
 ```
 
-#### External configuration entry
+#### Method 2 : External configuration entry
 
 ```js
 {
@@ -60,6 +60,21 @@ Add `'nuxt-stripe-module'` to the `modules` section of your `nuxt.config.js` fil
   stripe: {
     publishableKey: 'YOUR_STRIPE_PUBLISHABLE_KEY',
   },
+}
+```
+
+#### Method 3 : Runtime config
+
+```js
+{
+  modules: [
+    'nuxt-stripe-module',
+  ],
+  publicRuntimeConfig: {
+    stripe: {
+      publishableKey: 'YOUR_STRIPE_PUBLISHABLE_KEY',
+    }
+  }
 }
 ```
 
